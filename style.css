@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 16px;
+}
+
+#diskCanvas {
+    background: #232332;
+    border-radius: 50%;
+    touch-action: none;
+    display: block;
+}
+
+.toolbar {
+    display: flex;
+    gap: 16px;
+}
+
+.toolbar button {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 28px;
+    background: #3498DB;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+}
+
+.toolbar button:active {
+    background: #2171a6;
+}
+
+/* 弹窗 */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal {
+    background: #2d2d44;
+    border-radius: 16px;
+    padding: 24px;
+    width: 320px;
+    max-width: 90vw;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.modal h3 {
+    color: white;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.modal input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    background: #3d3d55;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 16px;
+    outline: none;
+}
+
+.modal input:focus {
+    border-color: #3498DB;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 11px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-confirm { background: #27AE60; color: white; }
+.btn-confirm:active { background: #1e8449; }
+.btn-cancel { background: #555; color: white; }
+.btn-cancel:active { background: #444; }
+
+.slice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.slice-list button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #3498DB;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 16px;
+}
+
+.slice-list button:active {
+    background: #2171a6;
+}
